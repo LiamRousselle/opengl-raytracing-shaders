@@ -30,7 +30,7 @@ namespace GUI {
 		io.Fonts->AddFontFromFileTTF("OpenSans-Bold.ttf", 15.0f);
 
 		// Setup Dear ImGui style
-		ImGui::StyleColorsDark();
+		ImGui::StyleColorsClassic();
 		//ImGui::StyleColorsClassic();
 
 		// Setup Platform/Renderer backends
@@ -326,7 +326,7 @@ namespace GUI {
 				refreshRequired = true;
 			}
 			else {
-				std::cout << "Failed to load skyboxes\\" << skyboxFilename << std::endl;
+				std::cout << "Failed to load skyboxes\\" << skyboxFilename << "\n";
 			}
 		}
 
@@ -383,6 +383,12 @@ namespace GUI {
 		ImGui::End();
 	}
 
+	void shadersSettingsUI() {
+		ImGui::Begin("Shader Settings");
+		
+		ImGui::End();
+	}
+	
 	void render() {
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
@@ -393,6 +399,7 @@ namespace GUI {
 		appSettingsUI();
 		skyboxSettingsUI();
 		cameraSettingsUI();
+		shadersSettingsUI();
 		if (animationRenderWindowVisible) animationRenderingUI();
 
 		ImGui::Render();

@@ -10,7 +10,8 @@ namespace GUI {
 	extern GLFWwindow* window;
 	extern bool shouldQuit;
 	extern bool animationRenderWindowVisible;
-
+	extern bool helloWorld;
+	
 	void init(GLFWwindow* window);
 	void cleanup();
 

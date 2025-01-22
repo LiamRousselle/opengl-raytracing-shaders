@@ -61,7 +61,7 @@ namespace Scene {
 	extern int selectedObjectIndex;
 	extern GLuint skyboxTexture;
 	extern bool planeVisible;
-
+	
 	void bind(GLuint shaderProgram);
 	void unbind();
 	void selectHovered(float mouseX, float mouseY, int screenWidth, int screenHeight, glm::vec3 cameraPosition, glm::mat4 rotationMatrix);

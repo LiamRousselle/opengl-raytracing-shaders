@@ -371,6 +371,8 @@ void main() {
 				}
 			}
 		}
+		
+		//fragColor = fragColor + (vec4(0.5, 0, 0, 1) - fragColor) * 0.85;
 	} else {
 		if (u_blur > 0.0 && u_accumulatedPasses > 0) centeredUV += vec2(rand(vec2(1, u_time)+fragUV.xy)*u_blur-u_blur/2, rand(vec2(2, u_time)+fragUV.yx)*u_blur-u_blur/2);
 		vec3 rayDir = (normalize(vec4(centeredUV, -1.0, 0.0)) * u_rotationMatrix).xyz;
